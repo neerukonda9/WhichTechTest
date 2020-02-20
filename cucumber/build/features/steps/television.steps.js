@@ -12,13 +12,13 @@ const cucumber_1 = require("cucumber");
 const protractor_1 = require("protractor");
 const chai = require("chai");
 const chaiAsPromised = require("chai-as-promised");
-const Television_1 = require("./pageObjects/Television");
+const Television_po_1 = require("./pageObjects/Television.po");
 const expect = chai.use(chaiAsPromised).expect;
 const cucumberTimeOut = 6 * 10000;
 let televisionPage;
 const waitFor = protractor_1.protractor.ExpectedConditions;
 cucumber_1.Before(() => {
-    televisionPage = new Television_1.TelevisionPage();
+    televisionPage = new Television_po_1.TelevisionPage();
 });
 cucumber_1.Given('I navigate to the tvReviewPage', { timeout: cucumberTimeOut }, () => __awaiter(this, void 0, void 0, function* () {
     yield televisionPage.maxWindowSize();

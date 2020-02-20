@@ -42,7 +42,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16719000000
+              "duration": 8779000000
             }
           },
           {
@@ -55,7 +55,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79000000
+              "duration": 95000000
             }
           },
           {
@@ -68,7 +68,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 59000000
+              "duration": 40000000
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           }
         ]

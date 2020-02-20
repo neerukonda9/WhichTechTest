@@ -9,18 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const protractor_1 = require("protractor");
-// import { CommonSettings } from './commonSettings';
 const PORT = process.env.JENKINS_PORT || 4200;
 const path = require('path');
-// const commonSettings = new CommonSettings();
 let chromeOptions = {
     args: ['--disable-infobars=true', '--window-size=1024,768'],
 };
-if (process.env.JENKINS_PORT) {
-    chromeOptions = {
-        args: ['--headless', '--no-sandbox', '--disable-gpu', '--disable-infobars=true'],
-    };
-}
 const cucumberReportDirectory = './cucumber/test-results';
 const jsonReportFile = cucumberReportDirectory + '/cucumber_report.json';
 let nodeModulePath = process.cwd();
@@ -48,7 +41,6 @@ exports.config = {
         showColors: true,
         defaultTimeoutInterval: 30000,
     },
-    // plugins: [commonSettings.commonVisualSettings()],
     onComplete() {
         return __awaiter(this, void 0, void 0, function* () {
         });
@@ -86,7 +78,7 @@ exports.config = {
         return CucumberHtmlReport.create({
             source: jsonReportFile,
             dest: cucumberReportDirectory,
-            title: 'My Project - Acceptance Test Run',
+            title: 'Which Test- Acceptance Test Run',
             component: new Date().toString(),
         })
             .then(console.log)

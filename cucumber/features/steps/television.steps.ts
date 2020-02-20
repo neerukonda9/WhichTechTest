@@ -2,7 +2,7 @@ import { Before, Given, Then, When } from 'cucumber';
 import { browser, By, ElementFinder, protractor, element, by } from 'protractor';
 import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
-import { TelevisionPage } from './pageObjects/Television';
+import { TelevisionPage } from './pageObjects/Television.po';
 
 const expect = chai.use(chaiAsPromised).expect;
 const cucumberTimeOut = 6 * 10000;

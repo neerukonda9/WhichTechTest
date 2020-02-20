@@ -1,19 +1,11 @@
 import { Config, browser } from 'protractor';
-// import { CommonSettings } from './commonSettings';
 
 const PORT = process.env.JENKINS_PORT || 4200;
 const path = require('path');
-// const commonSettings = new CommonSettings();
 
 let chromeOptions = {
     args: ['--disable-infobars=true', '--window-size=1024,768'],
 };
-
-if (process.env.JENKINS_PORT) {
-    chromeOptions = {
-        args: ['--headless', '--no-sandbox', '--disable-gpu', '--disable-infobars=true'],
-    };
-}
 
 const cucumberReportDirectory = './cucumber/test-results';
 const jsonReportFile = cucumberReportDirectory + '/cucumber_report.json';
@@ -41,7 +33,7 @@ export const config: Config = {
         showColors: true,
         defaultTimeoutInterval: 30000,
     },
-    // plugins: [commonSettings.commonVisualSettings()],
+    
     async onComplete() {
     },
     async onPrepare() {
@@ -78,7 +70,7 @@ export const config: Config = {
         return CucumberHtmlReport.create({
             source: jsonReportFile,
             dest: cucumberReportDirectory,
-            title: 'My Project - Acceptance Test Run',
+            title: 'Which Test- Acceptance Test Run',
             component: new Date().toString(),
         })
             .then(console.log)
