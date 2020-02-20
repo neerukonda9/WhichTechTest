@@ -287,20 +287,13 @@ Then('I should see allTelevisions link', { timeout: cucumberTimeOut }, async () 
     });
 });
 
-Then('I see tv and home entertaniment link', { timeout: cucumberTimeOut }, async () => {
-    
-},
-);
+Then('I see tv and home entertaniment link', { timeout: cucumberTimeOut }, async () => {},);
 
-Then('I see the television reviews results', { timeout: cucumberTimeOut }, async () => {
-    
-},
-);
+Then('I see the television reviews results', { timeout: cucumberTimeOut }, async () => },);
 
 10) We now need to add a Page Object file, which will store the elements our steps above interact with. In the page-object folder, add Television.po.ts and paste in:
 
 import { browser, by, element, } from 'protractor';
-
 
 export class TelevisionPage  {
     
@@ -340,8 +333,6 @@ Run it now by typing in the terminal:
 npm run webdriver
 
 The second is the command to run the tests. It firstly 'transpiles' the typescript into javascript and places each converted file in a build folder at runtime. It then tells protractor to run our config file, which will be situated in the build folder. 
-
-
 
 As a final step, you will need to add a tsconfig.json file to the cucumber folder for the transpiling to work. Add the following to the contents of this file:
 

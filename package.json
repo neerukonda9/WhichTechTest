@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "compile-bdd": "rimraf cucumber/build && tsc -p cucumber",
-    "webdriver-proxy": "webdriver-manager update --versions.chrome=79.0.3945.1308 --gecko true --ignore_ssl --proxy http://10.16.0.22:443",
+    "webdriver": "webdriver-manager update --versions.chrome=79.0.3945.1308 --gecko true --ignore_ssl",
     "bdd": "rimraf cucumber/build && tsc -p cucumber && protractor cucumber/build/protractor.conf.js"
   },
   "private": true,
