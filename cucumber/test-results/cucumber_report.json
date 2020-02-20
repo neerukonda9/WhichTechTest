@@ -1,0 +1,89 @@
+[
+  {
+    "description": "  As a public user, I want to review televisions on the TV review page",
+    "keyword": "Feature",
+    "name": "Review Television",
+    "line": 1,
+    "id": "review-television",
+    "tags": [],
+    "uri": "cucumber/features/reviewTelevision.feature",
+    "elements": [
+      {
+        "id": "review-television;verify-if-all-televisions-link-is-shown",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Verify if All Televisions link is shown",
+        "tags": [
+          {
+            "name": "@Reviewpage",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/build/features/steps/television.steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the tvReviewPage",
+            "match": {
+              "location": "cucumber/build/features/steps/television.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16719000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "the page loads",
+            "match": {
+              "location": "cucumber/build/features/steps/television.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see allTelevisions link",
+            "match": {
+              "location": "cucumber/build/features/steps/television.steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
